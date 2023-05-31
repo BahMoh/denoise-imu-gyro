@@ -7,7 +7,7 @@ import src.dataset as ds
 import numpy as np
 
 base_dir = os.path.dirname(os.path.realpath(__file__))
-data_dir = '/csv_data_dir/TUM/dataset'
+data_dir = 'csv_data_dir/TUM/dataset'
 # test a given network
 # address = os.path.join(base_dir, 'results/TUM/2020_02_18_16_26_33')
 # or test the last trained network
