@@ -288,7 +288,7 @@ class TUMVIDataset(BaseDataset):
 
         print("Start read_data, be patient please")
         def set_path(seq):
-            path_imu = os.path.join(data_dir, seq, "mav0", "imu0", "data.csv")
+            path_imu = os.path.join("/content/denoise-imu-gyro/csv_data_dir", seq, "mav0", "imu0", "data.csv")
             path_gt = os.path.join(data_dir, seq, "mav0", "mocap0", "data.csv")
             return path_imu, path_gt
 
