@@ -9,9 +9,9 @@ import numpy as np
 base_dir = os.path.dirname(os.path.realpath(__file__))
 data_dir = 'csv_data_dir/TUM/dataset'
 # test a given network
-address = os.path.join(base_dir, 'results/TUM/2023_06_05_07_25_28')
+# address = os.path.join(base_dir, 'results/TUM/2023_06_05_07_25_28')
 # or test the last trained network
-# address = 'last'
+address = 'last'
 ################################################################################
 # Network parameters
 ################################################################################
