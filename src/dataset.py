@@ -288,8 +288,8 @@ class TUMVIDataset(BaseDataset):
 
         print("Start read_data, be patient please")
         def set_path(seq):
-            path_imu = os.path.join("/content/denoise-imu-gyro/csv_data_dir/TUM/dataset", seq, "mav0", "imu0", "data.csv")
-            path_gt = os.path.join("/content/denoise-imu-gyro/csv_data_dir/TUM/dataset", seq, "mav0", "mocap0", "data.csv")
+            path_imu = os.path.join("/content/denoise-imu-gyro/csv_data_dir/TUM/dataset", seq.replace(".csv", ""), "mav0", "imu0", "data.csv")
+            path_gt = os.path.join("/content/denoise-imu-gyro/csv_data_dir/TUM/dataset", seq.replace(".csv", ""), "mav0", "mocap0", "data.csv")
             return path_imu, path_gt
 
         sequences = os.listdir(data_dir)
@@ -356,7 +356,7 @@ class TUMVIDataset(BaseDataset):
                 'xs': torch.cat((dxi_ij, masks.unsqueeze(1)), 1).float(),
                 'us': imu.float(),
             }
-            pdump(mondict, self.predata_dir, sequence + ".p")
+            pdump(mondict, self.predata_dir, sequence.replace(".csv", "") + ".p")
 
             # save ground truth
             mondict = {
@@ -365,4 +365,4 @@ class TUMVIDataset(BaseDataset):
                 'vs': v_gt.float(),
                 'ps': p_gt.float(),
             }
-            pdump(mondict, self.predata_dir, sequence + "_gt.p")
+            pdump(mondict, self.predata_dir, sequence.replace(".csv", "") + "_gt.p")

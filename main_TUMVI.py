@@ -106,7 +106,8 @@ learning_process.train(dataset_class, dataset_params, train_params)
 ################################################################################
 # Test on full data set
 ################################################################################
-learning_process = lr.GyroLearningBasedProcessing(train_params['res_dir'],
-    train_params['tb_dir'], net_class, net_params, address=address,
-    dt=train_params['loss']['dt'])
-learning_process.test(dataset_class, dataset_params, ['test'])
+# learning_process = lr.GyroLearningBasedProcessing(train_params['res_dir'],
+#     train_params['tb_dir'], net_class, net_params, address=address,
+#     dt=train_params['loss']['dt'])
+# learning_process.test(dataset_class, dataset_params, ['test'])
+

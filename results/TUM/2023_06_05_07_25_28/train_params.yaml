@@ -1,0 +1,27 @@
+dataloader:
+  batch_size: 10
+  num_workers: 0
+  pin_memory: false
+  shuffle: false
+freq_val: 600
+loss:
+  dt: 0.005
+  huber: 0.005
+  max_N: 5
+  min_N: 4
+  target: rotation matrix mask
+  w: 1000000.0
+loss_class: !!python/name:src.losses.GyroLoss ''
+n_epochs: 1800
+optimizer:
+  amsgrad: false
+  lr: 0.01
+  weight_decay: 0.1
+optimizer_class: !!python/name:torch.optim.adam.Adam ''
+res_dir: /content/denoise-imu-gyro/results/TUM
+scheduler:
+  T_0: 600
+  T_mult: 2
+  eta_min: 0.001
+scheduler_class: !!python/name:torch.optim.lr_scheduler.CosineAnnealingWarmRestarts ''
+tb_dir: /content/denoise-imu-gyro/results/runs/TUM
