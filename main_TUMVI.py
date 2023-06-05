@@ -9,9 +9,9 @@ import numpy as np
 base_dir = os.path.dirname(os.path.realpath(__file__))
 data_dir = 'csv_data_dir/TUM/dataset'
 # test a given network
-# address = os.path.join(base_dir, 'results/TUM/2020_02_18_16_26_33')
+address = os.path.join(base_dir, 'results/TUM/2023_06_05_07_25_28')
 # or test the last trained network
-address = 'last'
+# address = 'last'
 ################################################################################
 # Network parameters
 ################################################################################
@@ -106,8 +106,8 @@ learning_process.train(dataset_class, dataset_params, train_params)
 ################################################################################
 # Test on full data set
 ################################################################################
-# learning_process = lr.GyroLearningBasedProcessing(train_params['res_dir'],
-#     train_params['tb_dir'], net_class, net_params, address=address,
-#     dt=train_params['loss']['dt'])
-# learning_process.test(dataset_class, dataset_params, ['test'])
+learning_process = lr.GyroLearningBasedProcessing(train_params['res_dir'],
+    train_params['tb_dir'], net_class, net_params, address=address,
+    dt=train_params['loss']['dt'])
+learning_process.test(dataset_class, dataset_params, ['test'])
 
