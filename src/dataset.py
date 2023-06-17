@@ -29,9 +29,9 @@ class BaseDataset(Dataset):
         self._train = False
         self._val = False
         # noise density
-        self.imu_std = torch.Tensor([8e-5, 1e-3]).float()
+        self.imu_std = torch.Tensor([0e-5, 0e-3]).float()
         # bias repeatability (without in-run bias stability)
-        self.imu_b0 = torch.Tensor([1e-3, 1e-3]).float()
+        self.imu_b0 = torch.Tensor([0e-3, 0e-3]).float()
         # IMU sampling time
         self.dt = dt # (s)
         # sequence size during training

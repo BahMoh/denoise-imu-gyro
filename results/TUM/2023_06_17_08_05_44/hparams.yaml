@@ -1,0 +1,21 @@
+Loss: <class 'src.losses.GyroLoss'>
+Optimizer: <class 'torch.optim.adam.Adam'>
+Scheduler: <class 'torch.optim.lr_scheduler.CosineAnnealingWarmRestarts'>
+T_0: 600
+T_mult: 2
+amsgrad: false
+batch_size: 10
+dt: 0.005
+eta_min: 0.001
+freq_val: 600
+huber: 0.005
+lr: 0.01
+max_N: 5
+min_N: 4
+n_epochs: 1800
+num_workers: 0
+pin_memory: false
+shuffle: false
+target: rotation matrix mask
+w: 1000000.0
+weight_decay: 0.1
